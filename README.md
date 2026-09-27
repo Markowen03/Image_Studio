@@ -1,43 +1,43 @@
-# Studio ni Owen — Image Processing Project
+# 🖼️ Studio ni Owen — Image Processing Project
 
 A Python-based **Image Processing Midterm Project** developed using several image processing and computer vision libraries.
 
 The application provides four main image processing features:
 
-*  **Capture Image**
-*  **Remove Background**
-*  **Extract Text**
-*  **Convert to Pixel Art**
+* 📷 **Capture Image**
+* 🪄 **Remove Background**
+* 🔤 **Extract Text**
+* 🎮 **Convert to Pixel Art**
 
 The project uses a graphical user interface (GUI) built with **Tkinter**.
 
+---
 
+## ✨ Features
 
-##  Features
-
-###  Capture Image
+### 📷 Capture Image
 
 Uses **OpenCV** to access the computer's camera and capture an image.
 
 The captured image is saved as:
 
-text
+```text
 images/captured.jpg
+```
 
-
-###  Remove Background
+### 🪄 Remove Background
 
 Uses **rembg** and the lightweight **U²-NetP** model to automatically detect and remove the background from an image.
 
 Output:
 
-text
+```text
 output/no_background.png
-
+```
 
 The output is saved as a PNG file to support transparency.
 
-###  Extract Text
+### 🔤 Extract Text
 
 Uses **EasyOCR** to detect and extract English text from the captured image.
 
@@ -48,11 +48,11 @@ The extracted text is:
 
 Output:
 
-text
+```text
 output/extracted_text.txt
+```
 
-
-###  Convert to Pixel Art
+### 🎮 Convert to Pixel Art
 
 Uses **Pillow (PIL)** to create a pixel-art effect.
 
@@ -60,13 +60,13 @@ The image is first reduced to **64 × 64 pixels** and then resized back to its o
 
 Output:
 
-text
+```text
 output/pixel_art.png
+```
 
+---
 
-
-
-##  Technologies Used
+## 🛠️ Technologies Used
 
 | Technology | Purpose                        |
 | ---------- | ------------------------------ |
@@ -77,11 +77,11 @@ output/pixel_art.png
 | rembg      | Background removal             |
 | EasyOCR    | Text extraction / OCR          |
 
+---
 
+## 📁 Project Structure
 
-##  Project Structure
-
-text
+```text
 ImageProcessingMidterm/
 │
 ├── images/
@@ -94,13 +94,13 @@ ImageProcessingMidterm/
 │
 ├── main.py
 └── README.md
-
+```
 
 > The `images` and `output` folders are automatically created by the program if they do not already exist.
 
+---
 
-
-##  Requirements
+## ⚙️ Requirements
 
 Make sure you have:
 
@@ -109,125 +109,125 @@ Make sure you have:
 * Windows, macOS, or Linux
 * Internet connection for the first EasyOCR/model setup
 
+---
 
-
-##  Installation
+## 📦 Installation
 
 ### 1. Clone the repository
 
-bash
+```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
-
+```
 
 Then enter the project folder:
 
-bash
+```bash
 cd ImageProcessingMidterm
-
+```
 
 ### 2. Install the required libraries
 
-bash
+```bash
 pip install opencv-python pillow rembg easyocr
-
+```
 
 If you encounter an `onnxruntime` error when using `rembg`, install the CPU version:
 
-bash
+```bash
 pip install "rembg[cpu]"
+```
 
+---
 
-
-
-##  Running the Application
+## ▶️ Running the Application
 
 Run:
 
-bash
+```bash
 python main.py
-
+```
 
 The application will open with the main interface.
 
+---
 
-
-##  How to Use
+## 🖥️ How to Use
 
 ### 1. Capture an Image
 
 Click:
 
-text
- Capture Image
-
+```text
+📷 Capture Image
+```
 
 A camera window will open.
 
 Click **Capture** to save the image.
 
-
+---
 
 ### 2. Remove Background
 
 After capturing an image, click:
 
-text
- Remove Background
-
+```text
+🪄 Remove Background
+```
 
 The application will process the image and display the result.
 
-
+---
 
 ### 3. Extract Text
 
 Click:
 
-text
- Extract Text
-
+```text
+🔤 Extract Text
+```
 
 EasyOCR will analyze the captured image and detect text.
 
 The extracted text will appear in the application and will also be saved to:
 
-text
+```text
 output/extracted_text.txt
+```
 
-
-
+---
 
 ### 4. Convert to Pixel Art
 
 Click:
 
-text
-Convert to Pixel Art
-
+```text
+🎮 Convert to Pixel Art
+```
 
 The application will convert the captured image into a pixel-art style image.
 
-
+---
 
 ### 5. Clear Output
 
 Click:
 
-text
+```text
 Clear Output
-
+```
 
 This clears the image preview and extracted text from the GUI.
 
 **Note:** It does not delete the files saved in the `output` folder.
 
+---
 
-
-##  How the Project Works
+## 💡 How the Project Works
 
 The basic workflow of the application is:
 
-text
+```text
 Capture Image
       │
       ▼
@@ -247,11 +247,11 @@ captured.jpg
                               │
                               ▼
                          pixel_art.png
+```
 
+---
 
-
-
-##  Image Processing Techniques
+## 🧠 Image Processing Techniques
 
 ### Background Removal
 
@@ -265,21 +265,21 @@ The project uses the **U²-NetP** model through `rembg` to separate the foregrou
 
 The image is reduced to:
 
-text
+```text
 64 × 64 pixels
-
+```
 
 and then enlarged using:
 
-python
+```python
 Image.Resampling.NEAREST
-
+```
 
 This preserves the hard edges of the pixels and creates the pixel-art effect.
 
+---
 
-
-##  Project Information
+## 🎓 Project Information
 
 **Project:** Image Processing Code Python Midterm
 
@@ -291,9 +291,9 @@ This preserves the hard edges of the pixels and creates the pixel-art effect.
 
 **Author:** Mark Owen Badua
 
+---
 
-
-##  Notes
+## 📌 Notes
 
 * A webcam is required for the image capture feature.
 * EasyOCR may download its required models during the first run.
@@ -301,8 +301,8 @@ This preserves the hard edges of the pixels and creates the pixel-art effect.
 * Processing speed depends on the computer's hardware.
 * The project uses CPU processing for EasyOCR.
 
+---
 
-
-##  License
+## 📄 License
 
 This project was created for **educational purposes** as part of a college image processing midterm project.
